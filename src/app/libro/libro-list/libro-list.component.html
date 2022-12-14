@@ -1,0 +1,50 @@
+<!-- Begin page content -->
+<main class="flex-shrink-0">
+  <div class="container">
+
+
+      <div class='card'>
+          <div class='card-header'>
+              <h5>Lista dei risultati</h5>
+          </div>
+          <div class='card-body'>
+            <a routerLink="/libro/create" class="btn btn-primary btn-lg" href="#">Add New</a>
+
+              <div class='table-responsive'>
+                  <table class='table table-hover '>
+                      <thead>
+                          <tr>
+                              <th>Id</th>
+                              <th>Titolo</th>
+                              <th>Pagine</th>
+                              <th>Autore</th>
+                              <th>Data Pubblicazione</th>
+                              <th>Premiato</th>
+                              <th>Azioni</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr *ngFor="let libro of listaLibri">
+                              <td>{{libro.id}}</td>
+                              <td>{{libro.titolo}}</td>
+                              <td>{{libro.pagine}}</td>
+                              <td>{{libro.autore}}</td>
+                              <td>{{libro.dataPubblicazione | date:'dd-MM-yyyy'}}</td>
+                              <td>{{libro.premiato?"SI":"NO"}}</td>
+                              <td>
+                                <a [routerLink]="['/libro', libro.id]" class="btn btn-sm btn-outline-primary" href="#">Visualizza</a>
+                                <a [routerLink]="['/libro/delete', libro.id]" class="btn btn-sm btn-outline-danger" href="#">Rimuovi</a>
+                                <a [routerLink]="['/libro/update', libro.id]" class="btn btn-sm btn-outline-warning" href="#">Aggiorna</a>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+
+              <!-- end card-body -->
+          </div>
+          <!-- end card -->
+      </div>
+      <!-- end container -->
+  </div>
+</main>

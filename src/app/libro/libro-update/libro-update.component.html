@@ -1,0 +1,46 @@
+<main class="flex-shrink-0">
+  <div class="container">
+    <div class='card'>
+      <div class='card-header' align="center">
+        <h5>Inserisci elemento</h5>
+      </div>
+      <div class='card-body row g-3'>
+        <div class="col-md-6">
+          <label for="titolo" class="form-label">Titolo </label>
+          <input type="text" id="titolo" class="form-control" [(ngModel)]="libroPerUpdate.titolo"
+            placeholder="Inserire il titolo">
+        </div>
+
+        <div class="col-md-6">
+          <label for="pagine" class="form-label">Pagine </label>
+          <input type="number" id="pagine" class="form-control" [(ngModel)]="libroPerUpdate.pagine"
+            placeholder="Inserire il numero delle pagine">
+        </div>
+
+        <div class="col-md-6">
+          <label for="autore" class="form-label">Autore </label>
+          <input type="text" id="autore" class="form-control" [(ngModel)]="libroPerUpdate.autore"
+            placeholder="Inserire l'autore">
+        </div>
+
+        <div class="col-md-3">
+          <label for="dataPubblicazione" class="form-label">Data pubblicazione </label>
+          <input type="text" id="dataPubblicazione" class="form-control" [(ngModel)]="dataToString"
+            placeholder="dd/MM/yy">
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="premiatoId" name="premiato"
+              [(ngModel)]="libroPerUpdate.premiato">
+            <label class="form-check-label" for="premiatoId">Premiato</label>
+          </div>
+        </div>
+        <br>
+        <div>
+          <button class="btn btn-primary" (click)="aggiorna()">Confirm</button>
+        </div>
+        <!-- end card-body -->
+      </div>
+      <!-- end card -->
+    </div>

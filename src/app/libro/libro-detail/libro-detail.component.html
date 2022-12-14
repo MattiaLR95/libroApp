@@ -1,0 +1,45 @@
+<div class='card'>
+  <div class='card-header'>
+    <h5>Visualizza dettaglio</h5>
+  </div>
+
+
+  <div class='card-body'>
+    <dl class="row">
+      <dt class="col-sm-3 text-right">Id:</dt>
+      <dd class="col-sm-9">{{selectedLibro.id}}</dd>
+    </dl>
+
+    <dl class="row">
+      <dt class="col-sm-3 text-right">Titolo:</dt>
+      <dd class="col-sm-9">{{selectedLibro.titolo}}</dd>
+    </dl>
+
+    <dl class="row">
+      <dt class="col-sm-3 text-right">Pagine:</dt>
+      <dd class="col-sm-9">{{selectedLibro.pagine}}</dd>
+    </dl>
+
+    <dl class="row">
+      <dt class="col-sm-3 text-right">Autore:</dt>
+      <dd class="col-sm-9">{{selectedLibro.autore}}</dd>
+    </dl>
+
+    <dl class="row">
+      <dt class="col-sm-3 text-right">Data Pubblicazione:</dt>
+      <dd class="col-sm-9">{{selectedLibro.dataPubblicazione | date:'dd-MM-yyyy'}}</dd>
+    </dl>
+
+    <dl class="row">
+      <dt class="col-sm-3 text-right">Premiato:</dt>
+      <dd class="col-sm-9">{{selectedLibro.premiato?"SI":"NO"}}</dd>
+    </dl>
+
+  </div>
+  <!-- end card body -->
+
+  <div class='card-footer'>
+    <button class="btn btn-lg btn-primary" (click)="onClick()">Chiudi</button>
+  </div>
+  <!-- end card -->
+</div>
